@@ -17,21 +17,41 @@
      alert("Incorrect length");
      var passwordLength = prompt("Please enter how long you want your password to be : Must be 8-128");
    }
- var lowercase = confirm("Want lowercase character?");
+ var lowercaseChar = confirm("Want lowercase character?");
     if(true) {
       alert("You have selected lowercase letters.")
     }
     else {
       alert("You've declined a lowercase letters")
     }
-
-
+  var uppercaseChar = confirm("want uppercase?");
+   if(true) {
+     alert("You've selected uppercase letter")    
+   }
+  else {
+    alert("You've declined uppercase letters")
+  }
+var numberChar = confirm("Want numbers?");
+  if(true) {
+    alert("You've selected numbers")
+  }
+else {
+  alert("You've declined nuumbers")
+}
+var specialChar = confirm("Want special characters");
+  if(true) {
+    alert("You've selcted special characters")
+  }
+  else {
+    alert("You've declined special characters")
+  }
  
    var passwordText = document.querySelector("#password");
  
    passwordText.value = password;
  
  }
+ 
 
  // Add event listener to generate button
 

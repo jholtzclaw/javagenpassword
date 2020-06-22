@@ -9,3 +9,7 @@ a random password using different criteria. The user can chose to use numbers, s
 
  ## Website
  https://jholtzclaw.github.io/javagenpassword/.
+
+ ## Screenshot
+ 
+  ![Overview of Password Generator](/assets/images/screenshot1.JPG)
