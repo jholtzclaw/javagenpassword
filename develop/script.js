@@ -13,19 +13,26 @@
   
    // var password = generatePassword();
    var passwordLength = prompt("Please enter how long you want your password to be : Must be 8-128");
-   if (passwordLength < 8) {
-     alert("Your password must be at least 8 characters long")
+   while(passwordLength < 8 || passwordLength > 128) {
+     alert("Incorrect length");
+     var passwordLength = prompt("Please enter how long you want your password to be : Must be 8-128");
    }
-   if (passwordLength > 128) {
-     alert("Your password must be less than 128 characters long")
-   }
+ var lowercase = confirm("Want lowercase character?");
+    if(true) {
+      alert("You have selected lowercase letters.")
+    }
+    else {
+      alert("You've declined a lowercase letters")
+    }
+
+
  
    var passwordText = document.querySelector("#password");
  
    passwordText.value = password;
  
  }
- 
+
  // Add event listener to generate button
 
  generateBtn.addEventListener("click", writePassword);

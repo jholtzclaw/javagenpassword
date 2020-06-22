@@ -8,4 +8,4 @@ a random password using different criteria. The user can chose to use numbers, s
  JavaScript
 
  ## Website
- https://jholtzclaw.github.io/js-parakeet/.
+ https://jholtzclaw.github.io/javagenpassword/.
