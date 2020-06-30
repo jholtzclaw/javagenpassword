@@ -9,10 +9,10 @@ var specialChar
 
 
 // Arrays for letter, special characters, and numbers.
-var lowercaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var uppercaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var numberChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*'];
+var lowercaseCharArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var uppercaseCharArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var numberCharArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+var specialCharArr = ['!', '@', '#', '$', '%', '^', '&', '*'];
 
 
 
@@ -60,7 +60,7 @@ function writePassword() {
 
   }
   generatePassword()
- 
+
 
 }
 //for loop array 
@@ -78,38 +78,38 @@ function generatePassword() {
   var guaranteedChar = []
 
   if (passwordOptions.hasLowercase) {
-    possibleChar = possibleChar.concat(lowercaseChar);
-    guaranteedChar.push(getRandom(lowercaseChar))
+    possibleChar = possibleChar.concat(lowercaseCharArr);
+    guaranteedChar.push(getRandom(lowercaseCharArr))
   }
 
   if (passwordOptions.hasUppercase) {
-    possibleChar = possibleChar.concat(uppercaseChar);
-    guaranteedChar.push(getRandom(uppercaseChar))
+    possibleChar = possibleChar.concat(uppercaseCharArr);
+    guaranteedChar.push(getRandom(uppercaseCharArr))
   }
 
   if (passwordOptions.hasNumbers) {
-    possibleChar = possibleChar.concat(numberChar);
-    guaranteedChar.push(getRandom(numberChar))
+    possibleChar = possibleChar.concat(numberCharArr);
+    guaranteedChar.push(getRandom(numberCharArr))
   }
 
   if (passwordOptions.hasSpecial) {
-    possibleChar = possibleChar.concat(specialChar);
-    guaranteedChar.push(getRandom(specialChar))
+    possibleChar = possibleChar.concat(specialCharArr);
+    guaranteedChar.push(getRandom(specialCharArr))
   }
 
-  for(var i = 0; i < passwordOptions.length; i++){
+  for (var i = 0; i < passwordOptions.length; i++) {
     var possibleCharacter = getRandom(possibleChar)
     result.push(possibleCharacter)
   }
 
-  for(var i = 0; i < guaranteedChar.length; i++){
+  for (var i = 0; i < guaranteedChar.length; i++) {
     result[i] = guaranteedChar[i]
   }
 
-  
-   var passwordText = document.querySelector("#password");
 
-   passwordText.value = result.join("");
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = result.join("");
 }
 
 function getRandom(arr) {
@@ -117,6 +117,7 @@ function getRandom(arr) {
   var ranElement = arr[ranIndex]
   return ranElement
 }
+
 
 // Add event listener to generate button
 
